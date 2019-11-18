@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>Task</title>
+</head>
+<body>
+DNSWatch tracks malicious and suspicious domains; websites hosting phishing pages, distributing malware, command-and-control sites, and more. Lists of these domains are often shared on the internet. Let's write a program that allows us to search a list of "bad" domains for a specific domain. For example, "is google.com a bad domain?".
+Write the code so that it is easy for others to use and extend (as opposed to a one-time personal script). Consider:
+	<ul>
+		<li>Performance.</li>
+		<li>Readability.</li>
+		<li>Extensibility.</li>
+	</ul>
+	<h3>Part 1</h3>
+	Create a library to do the following:
+	<ul>
+		<li>Maintain a list of "domain feed sources": URLs that contain some form of info about malicious domains.</li>
+		<li>From each domain feed, fetch the data, parse it to collect domain names, and store them in an appropriate data structure.</li>
+	</ul>
+	It should support one domain feed:
+	<ul>
+		<li>"MalwareDomains": http://mirror1.malwaredomains.com/files/justdomains</li>
+	</ul>
+	<h3>Part 2</h3>
+	It should support an additional domain feed:
+	<ul>
+		<li>"OpenPhish": https://openphish.com/feed.txt</li>
+	</ul>
+	Add a feature:
+	<ul>
+		<li>Expose a search function which accepts a domain name argument, and returns which feeds (if any) the domain is present in.</li>
+	</ul>
+</body>
+</html>
